@@ -42,6 +42,8 @@ function reportEmergency(resource) {
       console.log(error);
     } else {
       console.log("Email sent: " + info.response);
+      clearInterval(timerId);
+      throw Error();
     }
   });
 }
@@ -56,7 +58,6 @@ async function main() {
     console.log("Main JS verification passed");
   } else {
     reportEmergency("Main JS");
-    throw Error();
   }
 
   // Runtime JS
@@ -72,7 +73,6 @@ async function main() {
     console.log("Runtime JS verification passed");
   } else {
     reportEmergency("Runtime JS");
-    throw Error();
   }
 
   // Vendor JS
@@ -88,7 +88,6 @@ async function main() {
     console.log("Vendor JS verification passed");
   } else {
     reportEmergency("Vendor JS");
-    throw Error();
   }
 
   // App JS
@@ -101,9 +100,8 @@ async function main() {
     console.log("App JS verification passed");
   } else {
     reportEmergency("App JS");
-    throw Error();
   }
 }
 
 const TIMER_INTERVAL = 30 * 1000; // 30 Seconds
-setInterval(main, TIMER_INTERVAL);
+let timerId = setInterval(main, TIMER_INTERVAL);
