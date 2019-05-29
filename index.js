@@ -52,7 +52,7 @@ async function main() {
   // Main HTML
   let mainUrl = "https://dxdao.daostack.io/";
   let mainTargetHash =
-    "d085e531b6bf690c0074d9d5661ea93763324e3ef9e16ff9ead7a735c15cabd5cee78a0a417533c5323cfdae50634dec018c8bf539c03cf76ddd4f66b584f009";
+    "26eea394c44a59e1bc5e16886d26370742f63dd701a4636eed0e20754103312ecd28829d625efaca6887b075894ffee2f8f76ca34f1d38148c5f808f8f0a06b6";
   let mainVerificationPassed = await verifySource(mainUrl, mainTargetHash);
   if (mainVerificationPassed) {
     console.log("Main JS verification passed");
@@ -77,9 +77,9 @@ async function main() {
 
   // Vendor JS
   let vendorUrl =
-    "https://dxdao.daostack.io/vendor.ff89d59e8a57108b6d86.chunk.js";
+    "https://dxdao.daostack.io/vendor.6f6051b0c678d4df7c48.chunk.js";
   let vendorTargetHash =
-    "34f044129070853ad2f822fa4e03cc7df928dba9d9faab88176eba6335da020c2195b570567bb23f3ec508b457d56bb0a5a3d864b6acff817d5c4599808fb5d7";
+    "21eea3281494d2033b4e9df674901cdd0398f8131d7ffd9aa16a6bf48d9591c7be6eaa13c37e1f3a12f26c40793ba09eb5e5cb0e9ac98f6251d280ffc501a0d0";
   let vendorVerificationPassed = await verifySource(
     vendorUrl,
     vendorTargetHash
@@ -91,9 +91,9 @@ async function main() {
   }
 
   // App JS
-  let appUrl = "https://dxdao.daostack.io/app.d5a1d39dcda23d9710f2.chunk.js";
+  let appUrl = "https://dxdao.daostack.io/app.ae7e1ab9ec82bb1a1204.chunk.js";
   let appTargetHash =
-    "fb846cea050dddfa3a5734a6be493a29aafbaa2e81f22feff49ed483afd85fe04ec0dde685ab46c1d3b7031fdb1070b3da7ff8952da4d3732fb2232fa43d8161";
+    "ee57a8b977942e4185b8115418a51bd49354fc8637875ec601c9280dcf468107ece5ba77929b71eee3abf74a3c1732423723749917c5a672f98e76633046f83c";
 
   let appVerificationPassed = await verifySource(appUrl, appTargetHash);
   if (appVerificationPassed) {
