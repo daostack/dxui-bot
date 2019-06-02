@@ -52,7 +52,7 @@ async function main() {
   // Main HTML
   let mainUrl = "https://dxdao.daostack.io/";
   let mainTargetHash =
-    "26eea394c44a59e1bc5e16886d26370742f63dd701a4636eed0e20754103312ecd28829d625efaca6887b075894ffee2f8f76ca34f1d38148c5f808f8f0a06b6";
+    "3c0f63b6f26f6d91a6a85d536b7abb49f523c55664f4a0ab09bfcad038f3d17c75e48509c28d4a40997750b1458eda67ceec98b14190855b20ba19c734d429e7";
   let mainVerificationPassed = await verifySource(mainUrl, mainTargetHash);
   if (mainVerificationPassed) {
     console.log("Main JS verification passed");
@@ -62,7 +62,7 @@ async function main() {
 
   // Runtime JS
   let runtimeUrl =
-    "https://dxdao.daostack.io/runtime.a40232df10e83de8e3a4.bundle.js";
+    "https://dxdao.daostack.io/runtime.5e3871f3cb851dfe3160.bundle.js";
   let runtimeTargetHash =
     "240a583ee0f3bb5917cf953665d8fb4ca56c78bdcb6496a7dc5acac8ee1fa88be31c421446fc9f36ef881e26d67368eeffb7d95552788e0ff0fa3380c57a57c2";
   let runtimeVerificationPassed = await verifySource(
@@ -77,9 +77,9 @@ async function main() {
 
   // Vendor JS
   let vendorUrl =
-    "https://dxdao.daostack.io/vendor.6f6051b0c678d4df7c48.chunk.js";
+    "https://dxdao.daostack.io/vendor.1bfe584971e7aef2e95b.chunk.js";
   let vendorTargetHash =
-    "21eea3281494d2033b4e9df674901cdd0398f8131d7ffd9aa16a6bf48d9591c7be6eaa13c37e1f3a12f26c40793ba09eb5e5cb0e9ac98f6251d280ffc501a0d0";
+    "cba5defc539969bd73b75fd0ab6fb2de5c8aff0a8833c6e534ff87cad7799791258750debedaeef1f0ede2a0c6fdfb4342a2f52a7de2e04ca0bc329bd191fd12";
   let vendorVerificationPassed = await verifySource(
     vendorUrl,
     vendorTargetHash
@@ -91,9 +91,9 @@ async function main() {
   }
 
   // App JS
-  let appUrl = "https://dxdao.daostack.io/app.ae7e1ab9ec82bb1a1204.chunk.js";
+  let appUrl = "https://dxdao.daostack.io/app.1cd8580f28a8554fa91a.chunk.js";
   let appTargetHash =
-    "ee57a8b977942e4185b8115418a51bd49354fc8637875ec601c9280dcf468107ece5ba77929b71eee3abf74a3c1732423723749917c5a672f98e76633046f83c";
+    "b5d158770924aa505ebaffdf0955ede69f35837b8b272d871f0d1cb4ab30c8315f944de8584e4ea98ea187d4a30ab1089aa2a04e8b1f58872cf7f6b14d36f6bc";
 
   let appVerificationPassed = await verifySource(appUrl, appTargetHash);
   if (appVerificationPassed) {
@@ -103,5 +103,5 @@ async function main() {
   }
 }
 
-const TIMER_INTERVAL = 30 * 1000; // 30 Seconds
+const TIMER_INTERVAL = 600 * 1000; // 10 Minutes
 let timerId = setInterval(main, TIMER_INTERVAL);
